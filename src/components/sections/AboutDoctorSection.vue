@@ -15,7 +15,7 @@ const highlights = [
             <span class="badge-lbl text-uppercase font-weight-bold text-center leading-tight">Años<br>Médicos</span>
           </div>
           <v-avatar size="420" class="elevation-6 border-white-glow">
-            <v-img src="/doctor.png" alt="Dr. Zafra" loading="lazy" class="doctor-avatar-img" />
+            <v-img src="/doctor.png" alt="Dr. Zafra" loading="lazy" class="doctor-avatar-img" img-style="object-position: 75% 0% !important;" />
           </v-avatar>
         </v-col>
 
@@ -79,6 +79,6 @@ const highlights = [
 
 .doctor-avatar-img :deep(img) {
   object-fit: cover !important;
-  object-position: center 12% !important;
+  object-position: 75% 20% !important;
 }
 </style>
