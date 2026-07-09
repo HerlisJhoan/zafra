@@ -6,13 +6,11 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   { text: 'Inicio', href: '#inicio', icon: 'mdi-home-outline' },
-  { text: '¿Cómo Ayuda?', href: '#beneficios', icon: 'mdi-help-circle-outline' },
-  { text: 'Tratamientos', href: '#servicios', icon: 'mdi-doctor' },
-  { text: 'El Proceso', href: '#proceso', icon: 'mdi-clipboard-text-play-outline' },
-  { text: 'Videos', href: '#videos', icon: 'mdi-video-outline' },
-  { text: 'Preguntas', href: '#faq', icon: 'mdi-frequently-asked-questions' },
-  { text: 'Contacto', href: '#citas', icon: 'mdi-phone-outline' },
-  { text: 'Mapa', href: '#sedes', icon: 'mdi-map-marker-outline' },
+  { text: 'Nosotros', href: '#nosotros', icon: 'mdi-account-group-outline' },
+  { text: 'Servicios', href: '#servicios', icon: 'mdi-doctor' },
+  { text: 'Enfermedades', href: '#enfermedades', icon: 'mdi-heart-outline' },
+  { text: 'Novedades', href: '#novedades', icon: 'mdi-newspaper-variant-outline' },
+  { text: 'Contacto', href: '#contacto', icon: 'mdi-phone-outline' },
 ]
 
 export interface Option {

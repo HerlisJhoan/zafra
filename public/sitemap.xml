@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Reemplaza REEMPLAZAR-CON-TU-DOMINIO por el dominio real antes de desplegar -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://REEMPLAZAR-CON-TU-DOMINIO/</loc>
+    <loc>https://zafra.vercel.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

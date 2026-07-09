@@ -28,6 +28,9 @@ defineProps<{
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
   z-index: 1500;
   animation: whatsapp-pulse 2.4s infinite;
+  text-decoration: none !important;
+  outline: none !important;
+  border: none !important;
   transition: transform 0.25s ease;
 }
 

@@ -36,13 +36,13 @@
             <div style="flex-grow: 1; height: 1.5px; background-color: rgba(9, 79, 42, 0.12); max-width: 100px;"></div>
           </div>
           
-          <p class="text-body-1 text-slate-muted mb-4" style="font-size: 1.5rem; line-height: 1.6;">
+          <p class="text-body-1 text-slate-muted mb-4" style="font-size: 1.1rem; line-height: 1.6;">
             El <strong>Dr. Zafra</strong> cuenta con una sólida trayectoria de 10 años en el cuidado y restauración de la salud articular en la región San Martín.
           </p>
-          <p class="text-body-1 text-slate-muted mb-4" style="font-size: 1.5rem; line-height: 1.6;">
+          <p class="text-body-1 text-slate-muted mb-4" style="font-size: 1.1rem; line-height: 1.6;">
             Su enfoque se centra en evitar procedimientos quirúrgicos de alto riesgo a través del uso de terapias biológicas autólogas.
           </p>
-          <p class="text-body-1 text-slate-muted mb-6" style="font-size: 1.5rem; line-height: 1.6;">
+          <p class="text-body-1 text-slate-muted mb-6" style="font-size: 1.1rem; line-height: 1.6;">
             Cada consulta cuenta con una evaluación exhaustiva y un protocolo individualizado con el fin de devolver la calidad de vida y el movimiento natural a pacientes con artrosis, desgaste de cartílago y lesiones deportivas.
           </p>
         </v-col>
@@ -110,7 +110,7 @@
               <v-avatar color="rgba(9, 79, 42, 0.06)" size="48" class="mr-4 text-primary flex-shrink-0">
                 <v-icon size="28">mdi-format-quote-open</v-icon>
               </v-avatar>
-              <p class="text-body-2 font-italic text-slate mb-0 mt-2" style="font-size: 1.5rem !important; max-width: 650px; line-height: 1.6;">
+              <p class="text-body-2 font-italic text-slate mb-0 mt-2" style="font-size: 1.15rem !important; max-width: 650px; line-height: 1.6;">
                 Nuestra misión es ofrecer tratamientos seguros, efectivos y personalizados que te permitan volver a disfrutar de una vida activa y sin dolor.
               </p>
             </div>

@@ -115,8 +115,8 @@ const emit = defineEmits<{
 
 <style scoped>
 .hero-section {
-  min-height: calc(100vh - 76px);
-  margin-top: 76px;
+  min-height: calc(100vh - 92px);
+  margin-top: 92px;
   background: url('/modern_clinic.png') no-repeat right center;
   background-size: cover;
   position: relative;
@@ -133,8 +133,8 @@ const emit = defineEmits<{
 
 @media (min-width: 600px) {
   .hero-section {
-    min-height: calc(100vh - 114px);
-    margin-top: 114px;
+    min-height: calc(100vh - 92px);
+    margin-top: 92px;
   }
 }
 

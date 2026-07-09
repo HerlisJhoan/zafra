@@ -60,7 +60,16 @@
       "Bash(node -e ' *)",
       "Bash(pnpm remove *)",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --window-size=500,140 --screenshot=/tmp/shots/topbar-check.png \"http://localhost:5177/#inicio\")",
-      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --window-size=1400,50 --screenshot=/tmp/shots/topbar-full.png \"http://localhost:5177/#inicio\")"
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --window-size=1400,50 --screenshot=/tmp/shots/topbar-full.png \"http://localhost:5177/#inicio\")",
+      "Bash(pnpm audit *)",
+      "Bash(echo \"---exit:$?---\")",
+      "Bash(pnpm run *)",
+      "Bash(node -e \"console.log\\(require\\('./package.json'\\).devDependencies.vite\\)\")",
+      "Bash(npm view *)",
+      "Bash(node -e \"console.log\\(require\\('./package.json'\\).dependencies['vuetify'], require\\('./package.json'\\).devDependencies['@vitejs/plugin-vue'], require\\('./package.json'\\).devDependencies['vite-plugin-vuetify'], require\\('./package.json'\\).devDependencies['vite-plugin-vue-devtools']\\)\")",
+      "Bash(pnpm install *)",
+      "Bash(xxd public/clinica.jpg)",
+      "Bash(pkill -f \"vite preview\")"
     ],
     "additionalDirectories": [
       "c:\\xampp\\htdocs\\fac\\zafra\\public"
