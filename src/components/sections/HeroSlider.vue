@@ -23,7 +23,7 @@ const emit = defineEmits<{
 
           <!-- Título Principal -->
           <h1 class="hero-main-title font-weight-black text-slate mb-4">
-            Recupera la movilidad<br>
+            Dr. Zafra: recupera la movilidad<br>
             <span class="text-primary">sin cirugía.</span>
           </h1>
 
@@ -94,17 +94,6 @@ const emit = defineEmits<{
               @click.prevent="emit('reserve-click')"
             >
               Reservar cita
-            </v-btn>
-            <v-btn
-              color="primary"
-              variant="outlined"
-              size="large"
-              class="action-btn px-8 rounded-lg font-weight-bold"
-              href="#servicios"
-              prepend-icon="mdi-play"
-              style="border-width: 2px; background: white;"
-            >
-              Ver tratamientos
             </v-btn>
           </div>
         </v-col>
