@@ -69,7 +69,12 @@
       "Bash(node -e \"console.log\\(require\\('./package.json'\\).dependencies['vuetify'], require\\('./package.json'\\).devDependencies['@vitejs/plugin-vue'], require\\('./package.json'\\).devDependencies['vite-plugin-vuetify'], require\\('./package.json'\\).devDependencies['vite-plugin-vue-devtools']\\)\")",
       "Bash(pnpm install *)",
       "Bash(xxd public/clinica.jpg)",
-      "Bash(pkill -f \"vite preview\")"
+      "Bash(pkill -f \"vite preview\")",
+      "Bash(where cwebp.exe)",
+      "Bash(where ffmpeg.exe)",
+      "Bash(where magick.exe)",
+      "Bash(python -c \"import PIL; print\\(PIL.__version__\\)\")",
+      "Bash(node -e \"console.log\\(require.resolve\\('sharp'\\)\\)\")"
     ],
     "additionalDirectories": [
       "c:\\xampp\\htdocs\\fac\\zafra\\public"

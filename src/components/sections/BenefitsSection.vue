@@ -9,7 +9,7 @@ const activeBenefit = ref(0)
   <section id="beneficios" class="section-padding bg-white position-relative overflow-hidden">
     <!-- Imagen de fondo decorativa absoluta (Mockup de rodilla y círculos) -->
     <div class="benefits-bg-decor d-none d-md-block">
-      <img src="/gallery/benefits_bg_graphic.png?v=2" alt="Fondo decorativo de regeneración de rodilla" class="knee-float-anim" />
+      <img src="/gallery/benefits_bg_graphic.webp" alt="Fondo decorativo de regeneración de rodilla" class="knee-float-anim" loading="lazy" />
     </div>
 
     <v-container class="position-relative" style="z-index: 2;">

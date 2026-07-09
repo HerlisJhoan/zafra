@@ -6,7 +6,7 @@ import { symptoms } from '@/data/content'
   <section id="sintomas" class="section-padding bg-white position-relative overflow-hidden">
     <!-- Imagen de fondo decorativa absoluta (Mockup de rodilla y círculos) -->
     <div class="symptoms-bg-decor d-none d-md-block">
-      <img src="/gallery/symptoms_bg_graphic.png?v=2" alt="Fondo decorativo de rodilla" class="knee-float-anim" />
+      <img src="/gallery/symptoms_bg_graphic.webp" alt="Fondo decorativo de rodilla" class="knee-float-anim" loading="lazy" />
     </div>
 
     <v-container class="position-relative" style="z-index: 2;">

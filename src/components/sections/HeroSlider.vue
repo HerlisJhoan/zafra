@@ -106,7 +106,7 @@ const emit = defineEmits<{
 .hero-section {
   min-height: calc(100vh - 92px);
   margin-top: 92px;
-  background: url('/modern_clinic.png') no-repeat right center;
+  background: url('/modern_clinic.webp') no-repeat right center;
   background-size: cover;
   position: relative;
 }

@@ -6,7 +6,7 @@ import { regenerativeServices, generalServices } from '@/data/content'
   <section id="servicios" class="section-padding bg-white position-relative overflow-hidden">
     <!-- Imagen de fondo decorativa absoluta (Mockup de silueta y círculos) -->
     <div class="services-bg-decor d-none d-md-block">
-      <img src="/gallery/services_bg_graphic.png" alt="Fondo decorativo de servicios" class="body-float-anim" />
+      <img src="/gallery/services_bg_graphic.webp" alt="Fondo decorativo de servicios" class="body-float-anim" loading="lazy" />
     </div>
 
     <v-container class="position-relative" style="z-index: 2;">
