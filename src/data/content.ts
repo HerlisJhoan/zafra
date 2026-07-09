@@ -87,7 +87,7 @@ export interface Symptom {
 
 export const symptoms: Symptom[] = [
   { icon: 'mdi-walk', title: 'Pérdida de Movilidad', desc: 'Dificultad en los movimientos cotidianos como caminar o rigidez al estar mucho tiempo sentado.' },
-  { icon: 'mdi-clock-alert-outline', title: 'Dolor Persistente', desc: 'Si el dolor persiste por semanas o incluso estando en reposo, puede ser señal de desgaste e inflamación.' },
+  { icon: 'mdi-clock-alert-outline', title: 'Dolor Persistente', desc: 'Si el dolor persiste por semanas o incluso estando en reposo, puede ser señal de desgaste articular (artrosis) e inflamación.' },
   { icon: 'mdi-waveform', title: 'Crujidos Articulares', desc: 'El sonido de roce o chasquido al doblar o caminar puede indicar desgaste si viene acompañado de dolor o rigidez.' },
   { icon: 'mdi-fire', title: 'Hinchazón y Calor', desc: 'La inflamación visible o sensación de calor en la articulación son señales de que algo requiere atención médica.' },
 ]
