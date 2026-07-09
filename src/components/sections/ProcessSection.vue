@@ -42,25 +42,25 @@ const currentStep = computed(() => processSteps[activeStep.value] ?? processStep
 
             <v-col cols="12" md="7">
               <v-card class="step-detail-card rounded-xl overflow-hidden h-100 bg-white elevation-4 border-light d-flex flex-column">
-                <div class="step-animation-container d-flex align-center justify-center position-relative py-8 overflow-hidden" style="min-height: 240px; background: linear-gradient(135deg, #0b1a36 0%, #1e3a8a 100%);">
+                <div class="step-animation-container d-flex align-center justify-center position-relative py-8 overflow-hidden" style="min-height: 240px; background: linear-gradient(135deg, #0A2E1D 0%, #145C38 100%);">
                   <div class="tech-grid-bg" style="opacity: 0.15;"></div>
 
                   <v-fade-transition v-if="activeStep === 0">
                     <div class="d-flex flex-column align-center relative text-white" style="z-index: 5;">
                       <div class="pulse-ring"></div>
-                      <v-icon size="64" color="blue-lighten-3" class="pulse-icon">mdi-needle</v-icon>
-                      <span class="text-caption mt-4 font-weight-bold text-blue-lighten-4" style="letter-spacing: 1px;">MUESTRA DE SANGRE AUTÓLOGA</span>
+                      <v-icon size="64" color="pink-lighten-3" class="pulse-icon">mdi-needle</v-icon>
+                      <span class="text-caption mt-4 font-weight-bold text-pink-lighten-3" style="letter-spacing: 1px;">MUESTRA DE SANGRE AUTÓLOGA</span>
                     </div>
                   </v-fade-transition>
 
                   <v-fade-transition v-if="activeStep === 1">
                     <div class="d-flex flex-column align-center relative text-white" style="z-index: 5;">
                       <div class="centrifuge-spin">
-                        <v-icon size="28" color="blue-lighten-4" class="tube-1">mdi-test-tube</v-icon>
-                        <v-icon size="28" color="blue-lighten-4" class="tube-2">mdi-test-tube</v-icon>
+                        <v-icon size="28" color="pink-lighten-3" class="tube-1">mdi-test-tube</v-icon>
+                        <v-icon size="28" color="pink-lighten-3" class="tube-2">mdi-test-tube</v-icon>
                       </div>
-                      <v-icon size="64" color="blue-lighten-3" class="spin-icon">mdi-sync</v-icon>
-                      <span class="text-caption mt-4 font-weight-bold text-blue-lighten-4" style="letter-spacing: 1px;">SEPARACIÓN EN CENTRÍFUGA (3200 RPM)</span>
+                      <v-icon size="64" color="pink-lighten-3" class="spin-icon">mdi-sync</v-icon>
+                      <span class="text-caption mt-4 font-weight-bold text-pink-lighten-3" style="letter-spacing: 1px;">SEPARACIÓN EN CENTRÍFUGA (3200 RPM)</span>
                     </div>
                   </v-fade-transition>
 
@@ -70,7 +70,7 @@ const currentStep = computed(() => processSteps[activeStep.value] ?? processStep
                         <div class="prp-layer d-flex align-center justify-center font-weight-black">PRP (Plaquetas)</div>
                         <div class="rbc-layer d-flex align-center justify-center font-weight-bold">Glóbulos Rojos</div>
                       </div>
-                      <span class="text-caption mt-4 font-weight-bold text-amber-accent-2" style="letter-spacing: 1px;">CONCENTRADO DE FACTORES DE CRECIMIENTO</span>
+                      <span class="text-caption mt-4 font-weight-bold text-pink-lighten-2" style="letter-spacing: 1px;">CONCENTRADO DE FACTORES DE CRECIMIENTO</span>
                     </div>
                   </v-fade-transition>
 
@@ -113,7 +113,7 @@ const currentStep = computed(() => processSteps[activeStep.value] ?? processStep
 .step-card-active {
   background: white !important;
   border-color: var(--primary-color) !important;
-  box-shadow: 0 8px 25px rgba(13, 71, 161, 0.08);
+  box-shadow: 0 8px 25px rgba(9, 79, 42, 0.1);
 }
 
 .step-card-title {
@@ -255,7 +255,7 @@ const currentStep = computed(() => processSteps[activeStep.value] ?? processStep
 .bio-particle {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 188, 212, 0.08) 0%, rgba(13, 71, 161, 0) 70%);
+  background: radial-gradient(circle, rgba(122, 46, 67, 0.08) 0%, rgba(9, 79, 42, 0) 70%);
   pointer-events: none;
   z-index: 1;
   animation: floatBioCell 12s ease-in-out infinite;

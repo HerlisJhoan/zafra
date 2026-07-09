@@ -118,7 +118,7 @@ export interface Benefit {
 
 export const benefits: Benefit[] = [
   { title: 'Regeneración', subtitle: 'Favorece la Regeneración Celular', icon: 'mdi-sprout', color: '#2E7D32', desc: 'Los factores de crecimiento presentes en las plaquetas estimulan la multiplicación de los condrocitos y células del tejido cartilaginoso, ayudando a reconstruir los tejidos desgastados de manera natural.' },
-  { title: 'Desinflamación', subtitle: 'Disminuye la Inflamación Crónica', icon: 'mdi-water-off', color: '#0288D1', desc: 'Ayuda a equilibrar el ambiente articular reduciendo las proteínas inflamatorias (citoquinas). Esto alivia la hinchazón y la sensación de rigidez en la rodilla.' },
+  { title: 'Desinflamación', subtitle: 'Disminuye la Inflamación Crónica', icon: 'mdi-water-off', color: '#0E7C66', desc: 'Ayuda a equilibrar el ambiente articular reduciendo las proteínas inflamatorias (citoquinas). Esto alivia la hinchazón y la sensación de rigidez en la rodilla.' },
   { title: 'Alivio de Dolor', subtitle: 'Ayuda a que el dolor baje significativamente', icon: 'mdi-heart-flash', color: '#D32F2F', desc: 'Al restaurar la homeostasis articular y promover la regeneración biológica local, los receptores del dolor se calman progresivamente, reduciendo la dependencia de analgésicos químicos.' },
   { title: 'Movilidad', subtitle: 'Mejora la Movilidad y Flexibilidad', icon: 'mdi-walk', color: '#7B1FA2', desc: 'Al desinflamar la articulación e incrementar la lubricación natural, la rodilla recupera su rango de movimiento para que puedas caminar, agacharte y subir escaleras sin impedimentos.' },
 ]
@@ -168,7 +168,6 @@ export const galleryPhotos: string[] = [
   '/gallery/slider/ejemplo-3.jpeg',
   '/gallery/slider/ejemplo-5.jpeg',
   '/gallery/slider/ejemplo-6.jpeg',
-  '/gallery/slider/ejemplo-9.jpeg',
 ]
 
 export interface Faq {

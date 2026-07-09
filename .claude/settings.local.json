@@ -45,7 +45,22 @@
       "Bash(chromium-cli --version)",
       "Bash(curl -s http://localhost:5173/src/main.ts -o /tmp/main-check.js; curl -s http://localhost:5173/ | head -30; echo \"---LOG---\"; tail -40 /tmp/vite-dev.log)",
       "Read(//tmp/**)",
-      "Bash(curl -s -o /tmp/app-vue.js -w \"HTTP_STATUS:%{http_code}\\\\n\" \"http://localhost:5176/src/App.vue\"; echo \"---\"; grep -i \"error\\\\|Internal server\" /tmp/app-vue.js | head -5; echo \"---size---\"; wc -l /tmp/app-vue.js)"
+      "Bash(curl -s -o /tmp/app-vue.js -w \"HTTP_STATUS:%{http_code}\\\\n\" \"http://localhost:5176/src/App.vue\"; echo \"---\"; grep -i \"error\\\\|Internal server\" /tmp/app-vue.js | head -5; echo \"---size---\"; wc -l /tmp/app-vue.js)",
+      "Bash(grep -rniE \"0d47a1|0288d1|00bcd4|1e3a8a|0b1a36|7b1fa2|124, ?77, ?255|13, ?71, ?161|2, ?136, ?209|blue-lighten|blue-darken|amber-darken|amber-accent|secondary-cyan|#[0-9a-f]{3,6}\" src/)",
+      "Bash(mkdir -p /tmp/shots)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --window-size=400,1600 --screenshot=/tmp/shots/mobile-full.png \"http://localhost:5176/#inicio\")",
+      "Read(//c/Users/HERLIS/AppData/Local/Temp/shots/**)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --window-size=400,1600 --screenshot=/tmp/shots/mobile-fixed.png \"http://localhost:5176/#inicio\")",
+      "Read(//tmp/shots/**)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --window-size=400,1000 --virtual-time-budget=3000 --dump-dom \"http://localhost:5176/#inicio\")",
+      "Bash(node \"C:/Users/HERLIS/AppData/Local/Temp/claude/c--xampp-htdocs-fac-zafra/09c1fff3-f45f-4ad8-aedf-e77d8a56046d/scratchpad/measure.mjs\")",
+      "Bash(cp \"C:/Users/HERLIS/AppData/Local/Temp/claude/c--xampp-htdocs-fac-zafra/09c1fff3-f45f-4ad8-aedf-e77d8a56046d/scratchpad/measure.mjs\" \"c:/xampp/htdocs/fac/zafra/measure.tmp.mjs\")",
+      "Bash(node measure.tmp.mjs)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --window-size=400,1000 --screenshot=/tmp/shots/mobile-fixed3.png \"http://localhost:5176/#inicio\")",
+      "Bash(node -e ' *)",
+      "Bash(pnpm remove *)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --window-size=500,140 --screenshot=/tmp/shots/topbar-check.png \"http://localhost:5177/#inicio\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --window-size=1400,50 --screenshot=/tmp/shots/topbar-full.png \"http://localhost:5177/#inicio\")"
     ],
     "additionalDirectories": [
       "c:\\xampp\\htdocs\\fac\\zafra\\public"

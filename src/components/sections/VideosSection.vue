@@ -16,7 +16,7 @@ const videos: VideoItem[] = [
     <div class="tech-grid-bg"></div>
     <v-container class="position-relative" style="z-index: 2;">
       <div class="text-center mb-12 reveal">
-        <span class="section-badge text-uppercase font-weight-bold text-primary px-3 py-1 bg-blue-lighten-5 rounded-pill">Multimedia</span>
+        <span class="section-badge text-uppercase font-weight-bold text-primary px-3 py-1 bg-primary-light rounded-pill">Multimedia</span>
         <h2 class="section-title font-weight-bold text-slate mt-2">Videos y Testimonios Clínicos</h2>
         <div class="title-bar mx-auto mt-3"></div>
         <p class="section-subtitle text-slate-muted mx-auto mt-4">
@@ -26,7 +26,7 @@ const videos: VideoItem[] = [
 
       <v-row class="justify-center">
         <v-col v-for="(video, idx) in videos" :key="idx" cols="12" md="6" class="reveal">
-          <v-card class="video-card lift-card rounded-2xl overflow-hidden elevation-4 border border-blue-lighten-4 h-100 d-flex flex-column">
+          <v-card class="video-card lift-card rounded-2xl overflow-hidden elevation-4 border border-primary-light h-100 d-flex flex-column">
             <div class="video-container position-relative bg-black overflow-hidden" style="aspect-ratio: 16 / 9; width: 100%;">
               <video controls class="w-100 h-100 d-block" preload="metadata" style="object-fit: contain;">
                 <source :src="video.src" type="video/mp4">
@@ -34,7 +34,7 @@ const videos: VideoItem[] = [
               </video>
             </div>
             <v-card-text class="pa-5 bg-white text-left flex-grow-1">
-              <h3 class="text-body-1 font-weight-bold text-blue-darken-4 mb-1">{{ video.title }}</h3>
+              <h3 class="text-body-1 font-weight-bold text-primary mb-1">{{ video.title }}</h3>
               <p class="text-caption text-grey-darken-2 mb-0">{{ video.desc }}</p>
             </v-card-text>
           </v-card>

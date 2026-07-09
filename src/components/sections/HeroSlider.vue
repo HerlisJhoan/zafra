@@ -10,19 +10,19 @@ const emit = defineEmits<{
     <!-- Capa de overlay para legibilidad del texto en cualquier dispositivo -->
     <div class="hero-overlay"></div>
     
-    <v-container class="position-relative h-100 d-flex align-center" style="z-index: 2;">
+    <v-container class="position-relative h-100 d-flex align-start align-md-center pt-0 pt-md-0" style="z-index: 2;">
       <v-row class="w-100">
         <!-- Columna de Contenido (Alineado a la izquierda, igual que el mockup) -->
-        <v-col cols="12" md="8" lg="6" class="text-left py-10 py-md-16">
+        <v-col cols="12" md="8" lg="6" class="text-left pt-2 pb-10 pt-md-16 pb-md-16">
           
           <!-- Badge Especialidad -->
-          <div class="d-inline-flex align-center px-4 py-1.5 rounded-pill bg-blue-lighten-5 text-primary text-caption font-weight-bold mb-6 border border-blue-lighten-4">
+          <div class="d-inline-flex align-center px-4 py-1.5 rounded-pill bg-primary-light text-primary text-caption font-weight-bold mb-6 border border-primary-light">
             <v-icon size="16" class="mr-2" color="primary">mdi-shield-check</v-icon>
             Centro especializado en Terapia Regenerativa
           </div>
 
           <!-- Título Principal -->
-          <h1 class="hero-main-title font-weight-black text-blue-darken-4 mb-4">
+          <h1 class="hero-main-title font-weight-black text-slate mb-4">
             Recupera la movilidad<br>
             <span class="text-primary">sin cirugía.</span>
           </h1>
@@ -36,47 +36,47 @@ const emit = defineEmits<{
           <v-row class="mb-10 text-slate-dark">
             <!-- 4.9/5 -->
             <v-col cols="6" sm="3" class="d-flex align-start gap-2 pr-1">
-              <v-avatar color="white" size="38" class="flex-shrink-0 border border-blue-lighten-4 elevation-1">
+              <v-avatar color="white" size="38" class="flex-shrink-0 border border-primary-light elevation-1">
                 <v-icon color="primary" size="18">mdi-star</v-icon>
               </v-avatar>
               <div>
-                <div class="font-weight-black text-blue-darken-4 stats-number">4.9/5</div>
+                <div class="font-weight-black text-primary stats-number">4.9/5</div>
                 <div class="text-caption text-grey-darken-1 leading-tight stats-label">Valoración promedio</div>
                 <div class="d-flex mt-0.5">
-                  <v-icon v-for="i in 5" :key="i" size="9" color="amber-darken-2">mdi-star</v-icon>
+                  <v-icon v-for="i in 5" :key="i" size="9" color="secondary">mdi-star</v-icon>
                 </div>
               </div>
             </v-col>
 
             <!-- Experiencia -->
             <v-col cols="6" sm="3" class="d-flex align-start gap-2 px-1">
-              <v-avatar color="white" size="38" class="flex-shrink-0 border border-blue-lighten-4 elevation-1">
+              <v-avatar color="white" size="38" class="flex-shrink-0 border border-primary-light elevation-1">
                 <v-icon color="primary" size="18">mdi-shield-check-outline</v-icon>
               </v-avatar>
               <div>
-                <div class="font-weight-black text-blue-darken-4 stats-number">+10 años</div>
+                <div class="font-weight-black text-primary stats-number">+10 años</div>
                 <div class="text-caption text-grey-darken-1 leading-tight stats-label">de experiencia</div>
               </div>
             </v-col>
 
             <!-- Pacientes -->
             <v-col cols="6" sm="3" class="d-flex align-start gap-2 px-1">
-              <v-avatar color="white" size="38" class="flex-shrink-0 border border-blue-lighten-4 elevation-1">
+              <v-avatar color="white" size="38" class="flex-shrink-0 border border-primary-light elevation-1">
                 <v-icon color="primary" size="18">mdi-account-group-outline</v-icon>
               </v-avatar>
               <div>
-                <div class="font-weight-black text-blue-darken-4 stats-number">+500</div>
+                <div class="font-weight-black text-primary stats-number">+500</div>
                 <div class="text-caption text-grey-darken-1 leading-tight stats-label">pacientes atendidos</div>
               </div>
             </v-col>
 
             <!-- Tratamientos -->
             <v-col cols="6" sm="3" class="d-flex align-start gap-2 pl-1">
-              <v-avatar color="white" size="38" class="flex-shrink-0 border border-blue-lighten-4 elevation-1">
+              <v-avatar color="white" size="38" class="flex-shrink-0 border border-primary-light elevation-1">
                 <v-icon color="primary" size="18">mdi-heart-pulse</v-icon>
               </v-avatar>
               <div>
-                <div class="font-weight-black text-blue-darken-4 stats-number">100%</div>
+                <div class="font-weight-black text-primary stats-number">100%</div>
                 <div class="text-caption text-grey-darken-1 leading-tight stats-label">tratamientos personalizados</div>
               </div>
             </v-col>
@@ -119,9 +119,16 @@ const emit = defineEmits<{
   margin-top: 76px;
   background: url('/modern_clinic.png') no-repeat right center;
   background-size: cover;
-  display: flex;
-  align-items: center;
   position: relative;
+}
+
+/* El centrado vertical ya lo maneja el v-container (d-flex align-md-center);
+   forzar flex aquí también hacía que el contenido se dimensionara por su
+   ancho "sin envolver" en vez del ancho real del viewport, cortando el texto
+   en pantallas angostas. */
+.hero-section > .v-container,
+.hero-section .v-container > .v-row {
+  min-width: 0;
 }
 
 @media (min-width: 600px) {
@@ -138,14 +145,17 @@ const emit = defineEmits<{
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.75) 45%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(90deg, rgba(251, 249, 245, 0.96) 0%, rgba(251, 249, 245, 0.75) 45%, rgba(251, 249, 245, 0) 100%);
   pointer-events: none;
   z-index: 1;
 }
 
 @media (max-width: 959px) {
+  .hero-section {
+    background-position: 72% center !important; /* Centra la recepción en móviles */
+  }
   .hero-overlay {
-    background: rgba(255, 255, 255, 0.92);
+    background: linear-gradient(180deg, rgba(251, 249, 245, 0.95) 0%, rgba(251, 249, 245, 0.8) 50%, rgba(251, 249, 245, 0.45) 100%) !important;
   }
 }
 

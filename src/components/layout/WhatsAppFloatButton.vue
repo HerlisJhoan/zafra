@@ -49,6 +49,13 @@ defineProps<{
   }
 }
 
+@media (max-width: 959px) {
+  .whatsapp-float {
+    bottom: 80px;
+    right: 16px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .whatsapp-float {
     animation: none;

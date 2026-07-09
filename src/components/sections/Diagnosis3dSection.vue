@@ -23,7 +23,7 @@ const nextDiagPage = () => {
     <div class="tech-grid-bg"></div>
     <v-container class="position-relative" style="z-index: 2;">
       <div class="text-center mb-12 reveal">
-        <span class="section-badge text-uppercase font-weight-bold text-primary px-3 py-1 bg-blue-lighten-5 rounded-pill">Guía Médica</span>
+        <span class="section-badge text-uppercase font-weight-bold text-primary px-3 py-1 bg-primary-light rounded-pill">Guía Médica</span>
         <h2 class="section-title font-weight-bold text-slate mt-4">¿Cómo se Diagnostica tu Rodilla?</h2>
         <div class="title-bar mx-auto mt-3"></div>
         <p class="section-subtitle text-slate-muted mx-auto mt-4">
@@ -39,7 +39,7 @@ const nextDiagPage = () => {
         <div class="diag-3d-viewport">
           <div class="diag-3d-carousel" :style="{ transform: 'rotateY(' + (activeDiagPage * -90) + 'deg)' }">
             <div v-for="(item, idx) in diagnosisSteps" :key="idx"
-              :class="['diag-3d-carousel-card rounded-2xl overflow-hidden elevation-8 border border-blue-lighten-4', activeDiagPage === idx ? 'active-card' : 'inactive-card']"
+              :class="['diag-3d-carousel-card rounded-2xl overflow-hidden elevation-8 border border-primary-light', activeDiagPage === idx ? 'active-card' : 'inactive-card']"
               :style="{ transform: 'rotateY(' + (idx * 90) + 'deg) translateZ(' + (isMobile ? '160px' : '260px') + ')' }"
               @click="activeDiagPage = idx">
               <v-img :src="item.img" height="100%" width="100%" contain class="bg-white"></v-img>
@@ -110,7 +110,7 @@ const nextDiagPage = () => {
 
 .active-card {
   opacity: 1;
-  box-shadow: 0 25px 50px rgba(13, 71, 161, 0.25) !important;
+  box-shadow: 0 25px 50px rgba(9, 79, 42, 0.25) !important;
 }
 
 .inactive-card {
@@ -152,7 +152,7 @@ const nextDiagPage = () => {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: rgba(13, 71, 161, 0.15);
+  background-color: rgba(9, 79, 42, 0.15);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -161,7 +161,7 @@ const nextDiagPage = () => {
 .diag-dot-active {
   width: 32px;
   border-radius: 6px;
-  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-cyan) 100%);
-  box-shadow: 0 0 10px rgba(2, 136, 209, 0.5);
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  box-shadow: 0 0 10px rgba(122, 46, 67, 0.5);
 }
 </style>

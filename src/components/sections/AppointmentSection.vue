@@ -43,7 +43,7 @@ const whatsAppLink = computed(() =>
                 class="d-flex flex-wrap gap-2 w-100 bg-transparent border-0 toggle-group">
                 <v-btn v-for="area in painAreas" :key="area.value" :value="area.value"
                   class="flex-grow-1 flex-shrink-0 text-caption rounded-lg py-2"
-                  style="border: 1px solid rgba(13, 71, 161, 0.25) !important;">
+                  style="border: 1px solid rgba(9, 79, 42, 0.25) !important;">
                   {{ area.text }}
                 </v-btn>
               </v-btn-toggle>
@@ -56,7 +56,7 @@ const whatsAppLink = computed(() =>
                 class="d-flex flex-wrap gap-2 w-100 bg-transparent border-0 toggle-group">
                 <v-btn v-for="day in days" :key="day.value" :value="day.value"
                   class="flex-grow-1 flex-shrink-0 text-caption rounded-lg py-2"
-                  style="border: 1px solid rgba(13, 71, 161, 0.25) !important;">
+                  style="border: 1px solid rgba(9, 79, 42, 0.25) !important;">
                   {{ day.text }}
                 </v-btn>
               </v-btn-toggle>
@@ -88,7 +88,7 @@ const whatsAppLink = computed(() =>
 .toggle-group :deep(.v-btn) {
   background-color: #ffffff !important;
   color: var(--slate-dark) !important;
-  border: 1px solid rgba(13, 71, 161, 0.2) !important;
+  border: 1px solid rgba(9, 79, 42, 0.2) !important;
   text-transform: none !important;
   font-weight: 600 !important;
   transition: all 0.25s ease !important;
@@ -96,7 +96,7 @@ const whatsAppLink = computed(() =>
 
 .toggle-group :deep(.v-btn--active),
 .toggle-group :deep(.v-btn--selected) {
-  background: linear-gradient(135deg, #0d47a1 0%, #00bcd4 100%) !important;
+  background: linear-gradient(135deg, #0D47A1 0%, #00B0FF 100%) !important;
   color: #ffffff !important;
   border-color: transparent !important;
   box-shadow: 0 6px 15px rgba(13, 71, 161, 0.3) !important;

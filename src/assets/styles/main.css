@@ -1,12 +1,12 @@
-/* Design tokens */
+/* Design tokens — identidad de centro médico regenerativo: verde esmeralda (regeneración/salud) + burdeos (plasma/vitalidad) */
 :root {
-  --primary-color: #0D47A1;
-  --secondary-cyan: #0288D1;
-  --slate-dark: #1E293B;
-  --slate-muted: #64748B;
-  --slate-light: #F8FAFC;
-  --slate-soft: #F1F5F9;
-  --border-light: rgba(0, 0, 0, 0.08);
+  --primary-color: #094F2A;      /* Verde Esmeralda Profundo */
+  --secondary-color: #7A2E43;    /* Burdeos Vital */
+  --slate-dark: #1C2E24;         /* Verde Bosque Profundo (texto) */
+  --slate-muted: #556B5F;        /* Gris Eucalipto */
+  --slate-light: #FBF9F5;        /* Crema Alabastro */
+  --slate-soft: #F2EBE1;         /* Arena Cálida de transición */
+  --border-light: rgba(9, 79, 42, 0.08);
 }
 
 html {
@@ -15,11 +15,11 @@ html {
 
 /* Anchors land below the fixed header instead of under it */
 section[id] {
-  scroll-margin-top: 92px;
+  scroll-margin-top: 148px;
 }
 
 .app-container {
-  background-color: #FAFBFD !important;
+  background-color: #FBF9F5 !important; /* Fondo general Crema */
 }
 
 .text-slate {
@@ -35,7 +35,7 @@ section[id] {
 }
 
 .bg-section-light {
-  background-color: #FAFBFD !important;
+  background-color: #FBF9F5 !important;
 }
 
 .bg-slate-soft {
@@ -71,7 +71,7 @@ section[id] {
 
 .action-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.25);
+  box-shadow: 0 8px 20px rgba(9, 79, 42, 0.25);
 }
 
 /* Encabezado estándar de sección (badge + título + subtítulo) */
@@ -86,10 +86,10 @@ section[id] {
 }
 
 .section-badge {
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   letter-spacing: 2px;
   font-weight: 700;
-  background: linear-gradient(120deg, #0d47a1 35%, #00bcd4 50%, #0d47a1 65%);
+  background: linear-gradient(120deg, #094F2A 35%, #7A2E43 50%, #094F2A 65%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -104,7 +104,7 @@ section[id] {
 }
 
 .section-title {
-  font-size: 2.25rem;
+  font-size: 2.8rem;
   color: var(--slate-dark);
   line-height: 1.3;
 }
@@ -118,7 +118,7 @@ section[id] {
 .title-bar {
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-cyan) 100%);
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   border-radius: 2px;
 }
 
@@ -129,7 +129,7 @@ section[id] {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(rgba(13, 71, 161, 0.03) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(9, 79, 42, 0.05) 1px, transparent 1px);
   background-size: 20px 20px;
   pointer-events: none;
   z-index: 1;
@@ -144,9 +144,9 @@ section[id] {
 
 .lift-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(2, 136, 209, 0.25) !important;
-  box-shadow: 0 15px 30px rgba(13, 71, 161, 0.06),
-              0 5px 15px rgba(2, 136, 209, 0.04) !important;
+  border-color: rgba(122, 46, 67, 0.25) !important;
+  box-shadow: 0 15px 30px rgba(9, 79, 42, 0.08),
+              0 5px 15px rgba(122, 46, 67, 0.05) !important;
 }
 
 /* Animación de aparición al hacer scroll (ver useScrollReveal) */
@@ -193,3 +193,88 @@ section[id] {
     max-width: 1560px !important;
   }
 }
+
+/* Offset para evitar que la barra de navegación inferior móvil tape el contenido */
+@media (max-width: 959px) {
+  main.main-content {
+    padding-bottom: 64px !important;
+  }
+}
+
+/* Tamaño de letra global para todos los párrafos solicitado por el usuario */
+p {
+  font-size: 1.5rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Excepciones para mantener el tamaño correcto en pies de página, leyendas, tarjetas y elementos pequeños */
+p.text-caption,
+p.text-body-2,
+p.footer-muted,
+.v-footer p,
+.footer-fine-print p,
+.step-card-subtitle,
+.stats-label,
+.sede-card p:not(.section-subtitle),
+.service-card p,
+.treatment-card-mockup p {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Estilos específicos para aumentar el tamaño en las tarjetas de síntomas */
+.symptom-card h3 {
+  font-size: 1.7rem !important;
+}
+.symptom-card p {
+  font-size: 1.5rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Banners CTA (Síntomas y Beneficios) */
+.symptom-cta-card h3 {
+  font-size: 1.8rem !important;
+  line-height: 1.3 !important;
+}
+.symptom-cta-card p {
+  font-size: 1.5rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Detalle de Beneficios (Pestañas e Info) */
+.v-window-item h3 {
+  font-size: 1.8rem !important;
+  line-height: 1.3 !important;
+}
+.v-window-item p {
+  font-size: 1.5rem !important;
+  line-height: 1.6 !important;
+}
+.benefit-quote span {
+  font-size: 1rem !important;
+}
+.benefit-quote p {
+  font-size: 1.4rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Tarjetas de Servicios (Medicina General y Terapia Regenerativa) */
+.service-card h4 {
+  font-size: 1.6rem !important;
+}
+.service-card p {
+  font-size: 1.45rem !important;
+  line-height: 1.55 !important;
+}
+
+/* Tarjetas de pasos en la sección de procedimiento */
+.step-card-title {
+  font-size: 1.35rem !important;
+}
+.step-card-subtitle {
+  font-size: 1.15rem !important;
+}
+
+
+
+

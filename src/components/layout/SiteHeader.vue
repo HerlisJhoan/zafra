@@ -17,15 +17,15 @@ const emit = defineEmits<{
       <!-- Info Izquierda -->
       <div class="d-flex align-center gap-4">
         <span class="d-flex align-center">
-          <v-icon size="14" class="mr-1 text-blue-lighten-3">mdi-map-marker-outline</v-icon>
+          <v-icon size="14" class="mr-1 text-primary-light">mdi-map-marker-outline</v-icon>
           Barrio Huayco, Tarapoto
         </span>
         <span class="d-flex align-center">
-          <v-icon size="14" class="mr-1 text-blue-lighten-3">mdi-clock-outline</v-icon>
+          <v-icon size="14" class="mr-1 text-primary-light">mdi-clock-outline</v-icon>
           Lun - Sáb: 8:00 AM - 8:00 PM
         </span>
         <span class="d-flex align-center">
-          <v-icon size="14" class="mr-1 text-blue-lighten-3">mdi-email-outline</v-icon>
+          <v-icon size="14" class="mr-1 text-primary-light">mdi-email-outline</v-icon>
            zafracarrera1985@gmail.com
         </span>
       </div>
@@ -36,8 +36,10 @@ const emit = defineEmits<{
           <a href="https://www.facebook.com/share/1J4iEtNMFj/" target="_blank" rel="noopener" class="text-white text-decoration-none">
             <v-icon size="16">mdi-facebook</v-icon>
           </a>
-          <a href="https://www.tiktok.com/@drzafra" target="_blank" rel="noopener" class="text-white text-decoration-none">
-            <v-icon size="16">mdi-tiktok</v-icon>
+          <a href="https://www.tiktok.com/@drzafra" target="_blank" rel="noopener" class="text-white text-decoration-none d-flex align-center">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+            </svg>
           </a>
           <a :href="`https://wa.me/${PHONE_E164.replace('+', '')}`" target="_blank" rel="noopener" class="text-white text-decoration-none">
             <v-icon size="16">mdi-whatsapp</v-icon>
@@ -45,7 +47,7 @@ const emit = defineEmits<{
         </div>
         <div class="vertical-divider"></div>
         <a :href="`tel:${PHONE_E164}`" class="d-flex align-center text-white text-decoration-none font-weight-bold">
-          <v-icon size="14" class="mr-1 text-blue-lighten-3">mdi-phone</v-icon>
+          <v-icon size="14" class="mr-1 text-primary-light">mdi-phone</v-icon>
           {{ PHONE_DISPLAY }}
         </a>
       </div>
@@ -55,13 +57,12 @@ const emit = defineEmits<{
     <div class="main-header d-flex align-center justify-space-between px-4 px-md-8">
       <!-- Logo Branding -->
       <a href="#inicio" class="d-flex align-center header-logo-link text-decoration-none" @click="activeNav = '#inicio'">
-        <v-img src="/logo.png" max-height="48" width="48" contain alt="Logo Dr. Zafra - Terapia Regenerativa"
-          class="rounded-circle mr-3 flex-shrink-0"></v-img>
+        <img src="/logo.png" alt="Logo Dr. Zafra - Terapia Regenerativa" class="mr-3 flex-shrink-0" style="height: 68px; width: 68px; object-fit: contain;" />
         <div class="d-flex flex-column text-left justify-center header-brand-text" style="line-height: 1.15;">
           <span class="text-uppercase font-weight-bold text-grey-darken-1"
-            style="font-size: 0.65rem; letter-spacing: 2px; white-space: nowrap;">Centro Médico</span>
+            style="font-size: 0.8rem; letter-spacing: 2px; white-space: nowrap;">Centro Médico</span>
           <span class="text-uppercase font-weight-black text-primary"
-            style="font-size: 1.25rem; letter-spacing: 1px; white-space: nowrap;">Dr. Zafra</span>
+            style="font-size: 1.55rem; letter-spacing: 1px; white-space: nowrap;">Dr. Zafra</span>
         </div>
       </a>
 
@@ -78,7 +79,7 @@ const emit = defineEmits<{
         <v-btn
           color="primary"
           variant="flat"
-          class="action-btn font-weight-bold d-none d-sm-flex text-white rounded-pill px-6"
+          class="action-btn font-weight-bold d-none d-sm-flex text-white rounded-pill px-6 py-2"
           href="#citas"
           @click.prevent="emit('nav-click', '#citas')"
         >
@@ -101,17 +102,17 @@ const emit = defineEmits<{
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 12px rgba(13, 71, 161, 0.06);
+  box-shadow: 0 2px 12px rgba(9, 79, 42, 0.08);
 }
 
 .top-bar {
   height: 38px;
-  background-color: #0b1a36;
+  background-color: #0A2E1D;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .main-header {
-  height: 76px;
+  height: 96px;
   background-color: #ffffff;
   border-bottom: 1px solid var(--border-light, #e0e0e0);
 }
@@ -128,7 +129,7 @@ const emit = defineEmits<{
 
 .nav-link {
   color: var(--slate-dark, #1e293b) !important;
-  font-size: 0.95rem !important;
+  font-size: 1.15rem !important;
   font-weight: 700 !important;
   text-transform: none !important;
   letter-spacing: 0.1px !important;
@@ -148,7 +149,7 @@ const emit = defineEmits<{
   left: 0;
   width: 100%;
   height: 3.5px;
-  background: linear-gradient(90deg, #0d47a1 0%, #00bcd4 100%);
+  background: linear-gradient(90deg, #094F2A 0%, #7A2E43 100%);
   border-radius: 4px;
   transform: scaleX(0);
   transform-origin: center;
@@ -156,7 +157,7 @@ const emit = defineEmits<{
 }
 
 .nav-link:hover {
-  color: var(--primary-color, #0d47a1) !important;
+  color: var(--primary-color, #094F2A) !important;
   background: transparent !important;
 }
 
@@ -166,7 +167,7 @@ const emit = defineEmits<{
 }
 
 .active-nav-link {
-  color: var(--primary-color, #0d47a1) !important;
+  color: var(--primary-color, #094F2A) !important;
   background: transparent !important;
   box-shadow: none !important;
 }
@@ -174,12 +175,13 @@ const emit = defineEmits<{
 .action-btn {
   text-transform: none !important;
   letter-spacing: 0.5px !important;
+  font-size: 1.15rem !important;
   transition: all 0.3s ease !important;
 }
 
 .action-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(13, 71, 161, 0.2);
+  box-shadow: 0 4px 12px rgba(9, 79, 42, 0.2);
 }
 
 .gap-1 { gap: 4px; }

@@ -32,7 +32,11 @@ import { faqs } from '@/data/content'
 </template>
 
 <style scoped>
+.section-subtitle {
+  font-size: 1.5rem;
+}
+
 .faq-panels :deep(.v-expansion-panel-title) {
-  font-size: 1rem;
+  font-size: 1.35rem;
 }
 </style>

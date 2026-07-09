@@ -7,7 +7,7 @@ import { ADDRESS, PHONE_DISPLAY } from '@/config/contact'
     <div class="tech-grid-bg"></div>
     <v-container class="position-relative" style="z-index: 2;">
       <div class="text-center mb-12 reveal">
-        <span class="section-badge text-uppercase font-weight-bold text-primary px-3 py-1 bg-blue-lighten-5 rounded-pill">Ubicación</span>
+        <span class="section-badge text-uppercase font-weight-bold text-primary px-3 py-1 bg-primary-light rounded-pill">Ubicación</span>
         <h2 class="section-title font-weight-bold mt-2">Visítanos en Tarapoto</h2>
         <div class="title-bar mx-auto mt-3"></div>
         <p class="section-subtitle text-slate-muted mx-auto mt-3">
@@ -22,7 +22,7 @@ import { ADDRESS, PHONE_DISPLAY } from '@/config/contact'
               <v-icon size="28" color="white" class="mr-3">mdi-map-marker-radius</v-icon>
               <div>
                 <h3 class="font-weight-bold mb-0" style="font-size: 1.15rem;">Consultorio Barrio Huayco</h3>
-                <p class="text-caption text-blue-lighten-4 mb-0">Sede Principal</p>
+                <p class="text-caption text-primary-light mb-0">Sede Principal</p>
               </div>
             </div>
             <div class="pa-6 flex-grow-1 text-left">
@@ -78,6 +78,6 @@ import { ADDRESS, PHONE_DISPLAY } from '@/config/contact'
 }
 
 .sede-header-bg {
-  background: linear-gradient(135deg, var(--primary-color) 0%, rgba(13, 71, 161, 0.85) 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, rgba(9, 79, 42, 0.85) 100%);
 }
 </style>
