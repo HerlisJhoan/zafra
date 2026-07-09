@@ -1,0 +1,195 @@
+/* Design tokens */
+:root {
+  --primary-color: #0D47A1;
+  --secondary-cyan: #0288D1;
+  --slate-dark: #1E293B;
+  --slate-muted: #64748B;
+  --slate-light: #F8FAFC;
+  --slate-soft: #F1F5F9;
+  --border-light: rgba(0, 0, 0, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Anchors land below the fixed header instead of under it */
+section[id] {
+  scroll-margin-top: 92px;
+}
+
+.app-container {
+  background-color: #FAFBFD !important;
+}
+
+.text-slate {
+  color: var(--slate-dark) !important;
+}
+
+.text-slate-muted {
+  color: var(--slate-muted) !important;
+}
+
+.border-light {
+  border: 1px solid var(--border-light) !important;
+}
+
+.bg-section-light {
+  background-color: #FAFBFD !important;
+}
+
+.bg-slate-soft {
+  background-color: var(--slate-soft) !important;
+}
+
+/* Accesibilidad: enlace para saltar al contenido */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 8px;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  z-index: 3000;
+  transition: top 0.2s ease;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+/* Botones de acción reutilizados en todas las secciones */
+.action-btn {
+  text-transform: none !important;
+  letter-spacing: 0.5px !important;
+  border-radius: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.25);
+}
+
+/* Encabezado estándar de sección (badge + título + subtítulo) */
+.section-padding {
+  padding: 80px 0;
+}
+
+@media (max-width: 600px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+.section-badge {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  background: linear-gradient(120deg, #0d47a1 35%, #00bcd4 50%, #0d47a1 65%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerSweepEffect 4s linear infinite;
+  display: inline-block;
+}
+
+@keyframes shimmerSweepEffect {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.section-title {
+  font-size: 2.25rem;
+  color: var(--slate-dark);
+  line-height: 1.3;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.title-bar {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-cyan) 100%);
+  border-radius: 2px;
+}
+
+/* Fondo de puntos técnico, usado en varias secciones (diagnóstico 3D, videos, sedes) */
+.tech-grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(13, 71, 161, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Elevación hover compartida por tarjetas de contenido (síntomas, servicios, sedes, videos, pasos) */
+.lift-card {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              border-color 0.4s ease !important;
+}
+
+.lift-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(2, 136, 209, 0.25) !important;
+  box-shadow: 0 15px 30px rgba(13, 71, 161, 0.06),
+              0 5px 15px rgba(2, 136, 209, 0.04) !important;
+}
+
+/* Animación de aparición al hacer scroll (ver useScrollReveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .section-badge {
+    animation: none;
+  }
+}
+
+/* Utilidades de espaciado */
+.gap-1 { gap: 4px; }
+.gap-2 { gap: 8px; }
+.gap-3 { gap: 12px; }
+.gap-4 { gap: 16px; }
+.gap-6 { gap: 24px; }
+.gap-8 { gap: 32px; }
+
+/* Ampliar el ancho del contenido de toda la página (menos el header) */
+@media (min-width: 1280px) {
+  main.v-main .v-container {
+    max-width: 1440px !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  main.v-main .v-container {
+    max-width: 1560px !important;
+  }
+}
