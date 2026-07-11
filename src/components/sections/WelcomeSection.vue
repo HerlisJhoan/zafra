@@ -9,17 +9,22 @@
         <!-- Texto de Bienvenida -->
         <v-col cols="12" md="6" class="reveal text-left">
           <h2 class="welcome-title font-weight-black mb-6">Bienvenido</h2>
-          
+
           <p class="welcome-text mb-6">
-            Bienvenido a la página web de <strong>Medicina Regenerativa y Terapia Celular Dr. Zafra</strong>, organización en salud líder en el tratamiento de enfermedades osteomioarticulares, con técnicas innovadoras y naturales.
+            Bienvenido a la página web de <strong> Centro Médico Dr. Zafra y Medicina Regenerativa</strong>, organización en
+            salud líder en el tratamiento de enfermedades osteomioarticulares, con técnicas innovadoras y naturales.
           </p>
 
           <p class="welcome-text mb-6">
-            Somos un equipo de médicos colegiados que hemos decidido apostar por la medicina regenerativa, una rama de la medicina que utiliza las propias células y tejidos del paciente para desinflamar, reparar, regenerar y restaurar el tejido dañado.
+            Somos un equipo de médicos colegiados que hemos decidido apostar por la medicina regenerativa, una rama de
+            la medicina que utiliza las propias células y tejidos del paciente para desinflamar, reparar, regenerar y
+            restaurar el tejido dañado.
           </p>
 
           <p class="welcome-text mb-6">
-            Desde el año 2011, ofrecemos servicios médicos exclusivos de medicina regenerativa aplicada a enfermedades como la artrosis, las lesiones meniscales, las lesiones de hombro, la condromalacia rotuliana, artritis reumatoidea entre otras.
+            Desde el año 2011, ofrecemos servicios médicos exclusivos de medicina regenerativa aplicada a enfermedades
+            como la artrosis, las lesiones meniscales, las lesiones de hombro, la condromalacia rotuliana, artritis
+            reumatoidea entre otras.
           </p>
 
           <p class="welcome-tagline font-weight-bold text-slate">
@@ -39,7 +44,8 @@
 
             <!-- Tarjeta Frase azul arriba derecha -->
             <v-col cols="6">
-              <v-card class="quote-card rounded-xl pa-5 text-white elevation-4 h-100 d-flex flex-column justify-space-between text-left">
+              <v-card
+                class="quote-card rounded-xl pa-5 text-white elevation-4 h-100 d-flex flex-column justify-space-between text-left">
                 <div class="quote-body font-italic">
                   "La medicina es un arte cuya magia no debe ser revelada, pero cuyo secreto debe ser compartido".
                 </div>
@@ -113,7 +119,7 @@
   margin: -6px;
 }
 
-.dense-grid > .v-col {
+.dense-grid>.v-col {
   padding: 6px;
 }
 

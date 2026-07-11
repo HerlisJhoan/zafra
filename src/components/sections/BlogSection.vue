@@ -2,8 +2,6 @@
 import { ref } from 'vue'
 
 interface BlogItem {
-  dateDay: string
-  dateMonth: string
   category: string
   title: string
   excerpt: string
@@ -15,8 +13,6 @@ interface BlogItem {
 
 const items = ref<BlogItem[]>([
   {
-    dateDay: '12',
-    dateMonth: 'MAR',
     category: 'VIDEO INFORMATIVO',
     title: '¿Por qué elegir al Dr. Zafra? Propuesta de Valor y Bioseguridad',
     excerpt: 'Conoce nuestra propuesta de valor, experiencia y los altos estándares de bioseguridad en el consultorio de Tarapoto.',
@@ -26,8 +22,6 @@ const items = ref<BlogItem[]>([
     isCurrentlyPlaying: false
   },
   {
-    dateDay: '09',
-    dateMonth: 'NOV',
     category: 'TESTIMONIOS',
     title: 'Testimonios de Pacientes: Casos de Éxito en Recuperación Articular',
     excerpt: 'Escucha a nuestros pacientes recuperados de artrosis y lesiones de rodilla contar su experiencia y cómo recuperaron su movilidad.',
@@ -37,8 +31,6 @@ const items = ref<BlogItem[]>([
     isCurrentlyPlaying: false
   },
   {
-    dateDay: '03',
-    dateMonth: 'AGO',
     category: 'ATENCIÓN MÉDICA',
     title: 'Evaluación y Diagnóstico Clínico Personalizado en Consulta',
     excerpt: 'El Dr. Zafra realiza una evaluación médica minuciosa para determinar el nivel de desgaste articular y diseñar el mejor plan.',
@@ -46,8 +38,6 @@ const items = ref<BlogItem[]>([
     author: 'Dr. Zafra'
   },
   {
-    dateDay: '30',
-    dateMonth: 'JUL',
     category: 'PROCEDIMIENTOS',
     title: 'Aplicación de Terapias Regenerativas con Altas Normas Clínicas',
     excerpt: 'Procedimientos biológicos ambulatorios mínimamente invasivos con altos estándares de calidad y confort para nuestros pacientes.',
@@ -102,11 +92,7 @@ const playVideo = (idx: number) => {
                 <v-img :src="item.img" height="280" cover></v-img>
               </div>
 
-              <!-- Badge de Fecha -->
-              <div class="date-badge d-flex flex-column align-center justify-center">
-                <span class="day font-weight-black">{{ item.dateDay }}</span>
-                <span class="month">{{ item.dateMonth }}</span>
-              </div>
+
             </div>
 
             <!-- Contenido de la Tarjeta -->
@@ -212,29 +198,7 @@ const playVideo = (idx: number) => {
   transform: scale(1.1);
 }
 
-.date-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background-color: #ffffff;
-  color: #1c2e24;
-  border-radius: 8px;
-  padding: 6px 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  line-height: 1;
-  z-index: 10;
-}
 
-.date-badge .day {
-  font-size: 1.3rem;
-  color: #1c2e24;
-}
-
-.date-badge .month {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #888;
-}
 
 .video-badge {
   position: absolute;
