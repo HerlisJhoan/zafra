@@ -52,7 +52,7 @@ import { ADDRESS, PHONE_DISPLAY } from '@/config/contact'
                   <v-icon size="24" color="#0a7cc4">mdi-phone-outline</v-icon>
                 </div>
                 <div class="info-text">
-                  +51 {{ PHONE_DISPLAY }}
+                  {{ PHONE_DISPLAY }}
                 </div>
               </div>
 

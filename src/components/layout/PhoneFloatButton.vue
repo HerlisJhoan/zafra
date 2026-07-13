@@ -15,7 +15,7 @@ defineProps<{
     
     <!-- Etiqueta negra inferior con el número -->
     <div class="phone-label">
-      tel: +51 {{ PHONE_DISPLAY }}
+      tel: {{ PHONE_DISPLAY }}
     </div>
   </div>
 </template>
