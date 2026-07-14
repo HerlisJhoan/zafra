@@ -10,9 +10,9 @@ const year = new Date().getFullYear()
       <div class="d-flex flex-column align-center text-center">
         <!-- Logo y Nombre (Centrados) -->
         <div class="d-flex align-center justify-center mb-4">
-          <div class="logo-circle mr-3">
-            <img :src="'/logo.png'" alt="Logo Dr. Zafra - Terapia Regenerativa"
-              style="height: 100%; width: 100%; object-fit: cover; border-radius: 50%; transform: scale(1.35);" />
+          <div class="logo-circle mr-3" style="background-color: #ffffff;">
+            <img :src="'/logo-knee.png?v=1'" alt="Logo Dr. Zafra - Terapia Regenerativa"
+              style="height: 100%; width: 100%; object-fit: contain; border-radius: 50%;" />
           </div>
           <div class="d-flex flex-column text-left justify-center" style="line-height: 1.15;">
             <span class="text-uppercase font-weight-bold footer-eyebrow"

@@ -25,25 +25,36 @@ const mediaItems = ref<MediaCard[]>([
     isCurrentlyPlaying: false
   },
   {
-    title: 'Evaluación y Diagnóstico Clínico',
-    desc: 'El Dr. Zafra realiza una evaluación médica minuciosa para determinar el nivel de desgaste articular en consulta.',
-    img: '/gallery/slider/atendiendo.jpeg'
+    title: 'Artrosis y Desgaste Articular',
+    desc: '¿El dolor en rodillas o caderas limita tu vida? Descubre qué es la artrosis, sus síntomas principales y las alternativas para aliviar el dolor.',
+    img: '',
+    videoSrc: '/testimonios-3.mp4',
+    isCurrentlyPlaying: false
   },
   {
-    title: 'Aplicación de Terapias Especializadas',
-    desc: 'Procedimientos biológicos ambulatorios con altos estándares de calidad y confort para nuestros pacientes.',
-    img: '/gallery/slider/ejemplo-7.jpeg'
+    title: 'Importancia del Diagnóstico',
+    desc: 'Cada dolor es una señal. El Dr. Zafra te explica por qué una evaluación profesional y un diagnóstico oportuno marcan la diferencia.',
+    img: '',
+    videoSrc: '/testimonio-4.mp4',
+    isCurrentlyPlaying: false
+  },
+  {
+    title: 'Recupera tu Bienestar',
+    desc: 'Nuestros tratamientos especializados te ayudan a recuperar tu movilidad. Conoce las recomendaciones del Dr. Zafra para tu salud articular.',
+    img: '',
+    videoSrc: '/testimonio-5.mp4',
+    isCurrentlyPlaying: false
   }
 ])
 
-const playVideo = (idx: number) => {
-  mediaItems.value.forEach((item, i) => {
-    if (i === idx) {
-      item.isCurrentlyPlaying = true
-    } else {
-      item.isCurrentlyPlaying = false
+const onVideoPlay = (event: Event) => {
+  // Pause all other videos when one starts playing
+  const allVideos = document.querySelectorAll('.video-player');
+  allVideos.forEach((vid) => {
+    if (vid !== event.target) {
+      (vid as HTMLVideoElement).pause();
     }
-  })
+  });
 }
 </script>
 
@@ -58,15 +69,16 @@ const playVideo = (idx: number) => {
         <div class="title-bar mx-auto mt-3"></div>
       </div>
 
-      <!-- Grid de 4 cuadritos/tarjetas -->
-      <v-row>
-        <v-col v-for="(item, idx) in mediaItems" :key="idx" cols="12" sm="6" md="3" class="reveal">
-          <v-card class="media-card-item rounded-xl overflow-hidden elevation-3 border-light h-100 d-flex flex-column bg-white">
+      <!-- Carrusel (Slide Group) de Videos -->
+      <v-slide-group show-arrows class="pa-4 reveal custom-slide-group">
+        <v-slide-group-item v-for="(item, idx) in mediaItems" :key="idx">
+          <div class="px-3 py-4" style="width: 340px; max-width: 85vw; height: 100%;">
+            <v-card class="media-card-item rounded-2xl overflow-hidden elevation-4 border-light h-100 d-flex flex-column bg-white mx-auto">
             <!-- Contenedor multimedia (Video o Imagen) -->
-            <div class="media-container position-relative overflow-hidden" style="height: 280px; background-color: #ffffff;">
-              <!-- Video directo con fondo blanco -->
-              <div v-if="item.videoSrc" class="video-wrapper bg-white h-100">
-                <video controls class="w-100 h-100 d-block" preload="metadata" style="object-fit: contain; background-color: #ffffff; height: 280px;">
+            <div class="media-container position-relative overflow-hidden" style="height: 440px; background-color: #000000;">
+              <!-- Video directo con fondo negro para evitar bordes blancos -->
+              <div v-if="item.videoSrc" class="video-wrapper bg-black h-100">
+                <video controls class="w-100 h-100 d-block video-player" preload="metadata" style="object-fit: cover; height: 440px;" @play="onVideoPlay">
                   <source :src="item.videoSrc" type="video/mp4">
                   Tu navegador no soporta reproducción de videos.
                 </video>
@@ -88,25 +100,78 @@ const playVideo = (idx: number) => {
               </p>
 
               <!-- Botones de Acción al pie -->
-              <div class="mt-auto">
+              <div class="mt-auto pt-4">
                 <v-btn
-                  variant="text"
+                  variant="tonal"
                   color="primary"
-                  class="px-0 font-weight-black text-uppercase action-play-btn"
+                  class="w-100 font-weight-bold text-none rounded-pill action-info-btn"
                   href="#citas"
+                  append-icon="mdi-arrow-right"
+                  height="44"
                 >
-                  Más información
+                  Agendar una consulta
                 </v-btn>
               </div>
             </v-card-text>
           </v-card>
-        </v-col>
-      </v-row>
+          </div>
+        </v-slide-group-item>
+      </v-slide-group>
     </v-container>
   </section>
 </template>
 
 <style scoped>
+/* Estilos Profesionales para las Flechas del Carrusel */
+:deep(.v-slide-group__prev),
+:deep(.v-slide-group__next) {
+  background-color: #ffffff !important;
+  border-radius: 50% !important;
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px !important;
+  box-shadow: 0 4px 15px rgba(10, 124, 196, 0.25) !important;
+  align-self: center !important;
+  margin: 0 12px !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  border: 1px solid rgba(10, 124, 196, 0.1);
+  color: #0a7cc4 !important;
+  z-index: 10;
+}
+
+:deep(.v-slide-group__prev.v-slide-group__prev--disabled),
+:deep(.v-slide-group__next.v-slide-group__next--disabled) {
+  opacity: 0.3 !important;
+  box-shadow: none !important;
+  transform: scale(0.9) !important;
+}
+
+:deep(.v-slide-group__prev:not(.v-slide-group__prev--disabled):hover),
+:deep(.v-slide-group__next:not(.v-slide-group__next--disabled):hover) {
+  background-color: #0a7cc4 !important;
+  color: #ffffff !important;
+  transform: scale(1.15) !important;
+  box-shadow: 0 8px 25px rgba(10, 124, 196, 0.4) !important;
+}
+
+:deep(.v-slide-group__prev i),
+:deep(.v-slide-group__next i) {
+  font-size: 32px !important;
+}
+
+.video-player {
+  border-radius: 16px 16px 0 0;
+}
+
+.action-info-btn {
+  transition: all 0.3s ease;
+}
+.action-info-btn:hover {
+  transform: translateY(-2px);
+  background-color: #0a7cc4 !important;
+  color: #ffffff !important;
+}
+
 .section-title-opinions {
   font-size: 2.2rem;
   color: #1a548a;

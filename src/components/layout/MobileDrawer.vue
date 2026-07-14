@@ -25,10 +25,10 @@ const handleItemClick = (href: string) => {
       <div class="d-flex align-center justify-space-between mb-8">
         <div class="d-flex align-center">
           <div
-            style="border: 2px solid rgba(10, 124, 196, 0.2); border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; overflow: hidden;"
+            style="border: 2px solid rgba(10, 124, 196, 0.2); border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: #ffffff;"
             class="mr-3 flex-shrink-0">
-            <img :src="'/logo.png'" alt="Logo Dr. Zafra"
-              style="height: 100%; width: 100%; object-fit: cover; border-radius: 50%; transform: scale(1.35); image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" />
+            <img :src="'/logo-knee.png?v=1'" alt="Logo Dr. Zafra"
+              style="height: 100%; width: 100%; object-fit: contain; border-radius: 50%; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" />
           </div>
           <div class="d-flex flex-column text-left justify-center" style="line-height: 1.15;">
             <span class="text-uppercase font-weight-bold text-grey-darken-1"

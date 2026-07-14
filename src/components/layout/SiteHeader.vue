@@ -208,33 +208,35 @@ const emit = defineEmits<{
 }
 
 .action-btn {
+  border: none !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #0a7cc4 0%, #065b92 100%) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  box-shadow: 0 4px 15px rgba(10, 124, 196, 0.3) !important;
   text-transform: none !important;
   letter-spacing: 0.5px !important;
   font-size: 1.05rem !important;
-  background-color: #ffffff !important;
-  color: #0a7cc4 !important;
-  transition: all 0.3s ease !important;
   animation: pulse-glow 2.5s infinite;
 }
 
 @keyframes pulse-glow {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 0 rgba(10, 124, 196, 0.5);
   }
 
   70% {
-    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 10px rgba(10, 124, 196, 0);
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(10, 124, 196, 0);
   }
 }
 
 .action-btn:hover {
-  transform: translateY(-2px);
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.35) !important;
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #0c8de0 0%, #0870b2 100%) !important;
+  box-shadow: 0 6px 20px rgba(10, 124, 196, 0.5) !important;
   animation-play-state: paused;
 }
 
