@@ -36,8 +36,17 @@ const emit = defineEmits<{
         </div>
       </a>
 
-      <!-- Espaciador para reservar espacio para el logo y texto de marca del fondo en Desktop -->
-      <div class="d-none d-lg-block" style="width: 360px; flex-shrink: 1;"></div>
+      <!-- Texto de marca superpuesto a la imagen de fondo en Desktop -->
+      <a href="#inicio" class="d-none d-lg-flex align-center header-logo-link text-decoration-none"
+        @click="activeNav = '#inicio'" style="margin-left: 120px; z-index: 20; width: 360px; flex-shrink: 1;">
+        <div class="d-flex flex-column text-left justify-center header-brand-text" style="line-height: 1;">
+          <span class="text-uppercase font-weight-black"
+            style="font-size: 1.2rem; letter-spacing: 1.5px; white-space: nowrap; color: #0a7cc4;">Centro Médico</span>
+          <div class="brand-divider my-1" style="background-color: #0a7cc4; opacity: 0.6; height: 2px;"></div>
+          <span class="text-uppercase font-weight-black"
+            style="font-size: 2rem; letter-spacing: 1px; white-space: nowrap; color: #0a7cc4;">Dr. Zafra</span>
+        </div>
+      </a>
 
       <!-- Menu Items (Centrados a la derecha de la marca de agua) -->
       <div class="d-none d-lg-flex align-center gap-2">

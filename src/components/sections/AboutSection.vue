@@ -12,12 +12,12 @@
           <div class="collage-wrapper">
             <!-- Círculo de Fondo Decorativo con ADN -->
             <div class="dna-circle-bg"></div>
-            
+
             <!-- Círculo Principal -->
             <div class="circle-main elevation-4">
               <v-img src="/gallery/slider/ejemplo-2.jpeg" cover class="fill-height"></v-img>
             </div>
-            
+
             <!-- Círculo Secundario Superpuesto -->
             <div class="circle-sub elevation-4">
               <v-img src="/gallery/slider/atendiendo.jpeg" cover class="fill-height"></v-img>
@@ -28,7 +28,7 @@
         <!-- Bloques Informativos Derechos (Somos Terapia Celular) -->
         <v-col cols="12" md="7" class="reveal text-left">
           <h2 class="section-title-somos font-weight-black mb-8">Somos Dr. Zafra - Terapia Regenerativa</h2>
-          
+
           <v-row class="gap-row">
             <!-- Bloque 1 -->
             <v-col cols="12" sm="6" class="d-flex align-start">
@@ -36,9 +36,10 @@
                 <v-icon size="28" color="#0a7cc4">mdi-heart-pulse</v-icon>
               </div>
               <div>
-                <h3 class="item-title font-weight-bold mb-2">Especialistas en medicina regenerativa:</h3>
+                <h3 class="item-title font-weight-bold mb-2">Medicina regenerativa:</h3>
                 <p class="item-text text-slate-muted">
-                  Brindamos tratamientos biológicos y naturales con célula madre, exosomas, factor de crecimiento celular, plasma rico en plaquetas, entre otros, para enfermedades osteomioarticulares.
+                  Brindamos tratamientos biológicos y naturales con célula madre, exosomas, factor de crecimiento
+                  celular, plasma rico en plaquetas, entre otros, para enfermedades osteomioarticulares.
                 </p>
               </div>
             </v-col>
@@ -51,7 +52,8 @@
               <div>
                 <h3 class="item-title font-weight-bold mb-2">Tratamientos integrales y personalizados:</h3>
                 <p class="item-text text-slate-muted">
-                  Ofrecemos una variedad de tratamientos que se adaptan a las necesidades y condiciones de cada paciente, buscando la mejor solución para su problema de salud.
+                  Ofrecemos una variedad de tratamientos que se adaptan a las necesidades y condiciones de cada
+                  paciente, buscando la mejor solución para su problema de salud.
                 </p>
               </div>
             </v-col>
@@ -64,7 +66,9 @@
               <div>
                 <h3 class="item-title font-weight-bold mb-2">Reconocimiento internacional:</h3>
                 <p class="item-text text-slate-muted">
-                  Reconocidos internacionalmente por la Sociedad Internacional de salud, investigación, desarrollo empresarial y tecnologías - SIISDET. Somos miembros de la Global Stem Cell Group (USA) y la International Society for Stem Cell Application (ISSCA-USA).
+                  Reconocidos internacionalmente por la Sociedad Internacional de salud, investigación, desarrollo
+                  empresarial y tecnologías - SIISDET. Somos miembros de la Global Stem Cell Group (USA) y la
+                  International Society for Stem Cell Application (ISSCA-USA).
                 </p>
               </div>
             </v-col>
@@ -77,7 +81,8 @@
               <div>
                 <h3 class="item-title font-weight-bold mb-2">Tecnología de punta:</h3>
                 <p class="item-text text-slate-muted">
-                  Utilizamos equipos, insumos y técnicas de última generación que garantizan la efectividad y seguridad de todos nuestros tratamientos.
+                  Utilizamos equipos, insumos y técnicas de última generación que garantizan la efectividad y seguridad
+                  de todos nuestros tratamientos.
                 </p>
               </div>
             </v-col>
@@ -140,8 +145,13 @@
 }
 
 @keyframes rotate-dashed {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .icon-box {
@@ -164,7 +174,7 @@
   line-height: 1.5;
 }
 
-.gap-row > .v-col {
+.gap-row>.v-col {
   padding-bottom: 24px;
 }
 </style>
