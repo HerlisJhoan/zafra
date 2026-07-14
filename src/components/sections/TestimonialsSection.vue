@@ -72,13 +72,13 @@ const onVideoPlay = (event: Event) => {
       <!-- Carrusel (Slide Group) de Videos -->
       <v-slide-group show-arrows class="pa-4 reveal custom-slide-group">
         <v-slide-group-item v-for="(item, idx) in mediaItems" :key="idx">
-          <div class="px-3 py-4" style="width: 340px; max-width: 85vw; height: 100%;">
+          <div class="px-3 py-4" style="width: 360px; max-width: 92vw; height: 100%;">
             <v-card class="media-card-item rounded-2xl overflow-hidden elevation-4 border-light h-100 d-flex flex-column bg-white mx-auto">
             <!-- Contenedor multimedia (Video o Imagen) -->
-            <div class="media-container position-relative overflow-hidden" style="height: 440px; background-color: #000000;">
-              <!-- Video directo con fondo negro para evitar bordes blancos -->
-              <div v-if="item.videoSrc" class="video-wrapper bg-black h-100">
-                <video controls class="w-100 h-100 d-block video-player" preload="metadata" style="object-fit: cover; height: 440px;" @play="onVideoPlay">
+            <div class="media-container position-relative overflow-hidden" style="height: 420px; background-color: #ffffff;">
+              <!-- Video directo con fondo blanco -->
+              <div v-if="item.videoSrc" class="video-wrapper bg-white h-100">
+                <video controls class="w-100 h-100 d-block video-player" preload="metadata" style="object-fit: contain;" @play="onVideoPlay">
                   <source :src="item.videoSrc" type="video/mp4">
                   Tu navegador no soporta reproducción de videos.
                 </video>
@@ -157,6 +157,13 @@ const onVideoPlay = (event: Event) => {
 :deep(.v-slide-group__prev i),
 :deep(.v-slide-group__next i) {
   font-size: 32px !important;
+}
+
+@media (max-width: 768px) {
+  :deep(.v-slide-group__prev),
+  :deep(.v-slide-group__next) {
+    display: none !important;
+  }
 }
 
 .video-player {

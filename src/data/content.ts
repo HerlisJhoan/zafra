@@ -131,7 +131,6 @@ export const regenerativeServices: ServiceItem[] = [
   { icon: 'mdi-water-opacity', title: 'Plasma Rico en Plaquetas', desc: 'Regeneración celular con factores de crecimiento del propio paciente.' },
   { icon: 'mdi-waves', title: 'Terapia en Ondas de Choque', desc: 'Estimulación mecánica no invasiva para reparar tejidos y aliviar el dolor.' },
   { icon: 'mdi-dna', title: 'Exosomas', desc: 'Vesículas regenerativas de última generación para acelerar la recuperación.' },
-  { icon: 'mdi-molecule', title: 'Ozonoterapia', desc: 'Oxigenación terapéutica que reduce la inflamación y el dolor articular.' },
   { icon: 'mdi-needle', title: 'Viscosuplementación con Ácido Hialurónico', desc: 'Lubricación articular para mejorar el movimiento y reducir la fricción.' },
   { icon: 'mdi-pill', title: 'Vitaminoterapia', desc: 'Suplementación intravenosa para potenciar la recuperación y energía.' },
 ]
