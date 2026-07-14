@@ -37,8 +37,8 @@ const emit = defineEmits<{
       </a>
 
       <!-- Texto de marca superpuesto a la imagen de fondo en Desktop -->
-      <a href="#inicio" class="d-none d-lg-flex align-center header-logo-link text-decoration-none"
-        @click="activeNav = '#inicio'" style="margin-left: 120px; z-index: 20; width: 360px; flex-shrink: 1;">
+      <a href="#inicio" class="d-none d-lg-flex align-center header-logo-link brand-desktop-link text-decoration-none"
+        @click="activeNav = '#inicio'" style="z-index: 20;">
         <div class="d-flex flex-column text-left justify-center header-brand-text" style="line-height: 1;">
           <span class="text-uppercase font-weight-black"
             style="font-size: 1.2rem; letter-spacing: 1.5px; white-space: nowrap; color: #0a7cc4;">Centro Médico</span>
@@ -60,7 +60,7 @@ const emit = defineEmits<{
       <!-- Action Button (Reservar Cita) & Social Media Circle Icons & Mobile Menu Icon -->
       <div class="d-flex align-center gap-3">
         <!-- Redes Sociales Circulares (Modelo de Referencia) -->
-        <div class="d-none d-lg-flex align-center gap-2 mr-2">
+        <div class="d-none d-lg-flex align-center gap-2 mr-2 header-social-icons">
           <a href="https://www.facebook.com/share/1J4iEtNMFj/" target="_blank" rel="noopener" class="social-circle-link"
             aria-label="Facebook">
             <v-icon size="16">mdi-facebook</v-icon>
@@ -97,7 +97,7 @@ const emit = defineEmits<{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(9, 79, 42, 0.12);
 }
@@ -146,6 +146,12 @@ const emit = defineEmits<{
 
 .header-logo-link {
   text-decoration: none;
+}
+
+.brand-desktop-link {
+  margin-left: 120px;
+  width: 360px;
+  flex-shrink: 1;
 }
 
 .nav-link {
@@ -280,6 +286,37 @@ const emit = defineEmits<{
 
   .active-nav-link {
     color: #0a7cc4 !important;
+  }
+}
+
+/* Justo al aparecer el menú desktop (breakpoint lg de Vuetify en este
+   proyecto = 1145px) el contenido no cabe con los anchos por defecto y
+   empuja el botón "Reservar Cita" fuera del viewport.
+   Se reduce el padding del menú y del botón en ese rango, sin tocar el
+   margen de la marca (para no montarse sobre el logo del fondo). */
+@media (min-width: 1145px) and (max-width: 1599px) {
+  .nav-link {
+    padding: 8px 6px !important;
+    font-size: 0.78rem !important;
+  }
+
+  .action-btn {
+    font-size: 0.92rem !important;
+  }
+
+  .action-btn.px-6 {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .header-social-icons {
+    gap: 4px !important;
+    margin-right: 4px !important;
+  }
+
+  .header-social-icons .social-circle-link {
+    width: 30px;
+    height: 30px;
   }
 }
 </style>
