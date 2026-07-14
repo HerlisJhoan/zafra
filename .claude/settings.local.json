@@ -84,7 +84,9 @@
       "Bash(xxd public/logo.png)",
       "Bash(python3 -c ' *)",
       "Bash(node -e \"console.log\\(process.version\\)\")",
-      "Bash(npx --yes playwright@1 --version)"
+      "Bash(npx --yes playwright@1 --version)",
+      "Bash(awk '/onMounted/,0' \"c:\\\\xampp\\\\htdocs\\\\fac\\\\zafra\\\\src\\\\App.vue\")",
+      "Bash(node -e \"console.log\\(require\\('vuetify/package.json'\\).version\\)\")"
     ],
     "additionalDirectories": [
       "c:\\xampp\\htdocs\\fac\\zafra\\public"

@@ -24,7 +24,7 @@ const year = new Date().getFullYear()
 
         <!-- Breve descripción -->
         <p class="footer-muted text-body-2 mb-4" style="max-width: 500px;">
-          Centro Médico en Medicina y Terapia Regenerativa en Tarapoto. Calidad de vida y alivio definitivo para
+          Centro Médico y Terapia Regenerativa en Tarapoto. Calidad de vida y alivio definitivo para
           tu salud.
         </p>
 

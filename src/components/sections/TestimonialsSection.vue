@@ -75,18 +75,26 @@ const onVideoPlay = (event: Event) => {
           <div class="px-3 py-4" style="width: 360px; max-width: 92vw; height: 100%;">
             <v-card class="media-card-item rounded-2xl overflow-hidden elevation-4 border-light h-100 d-flex flex-column bg-white mx-auto">
             <!-- Contenedor multimedia (Video o Imagen) -->
-            <div class="media-container position-relative overflow-hidden" style="height: 420px; background-color: #ffffff;">
-              <!-- Video directo con fondo blanco -->
-              <div v-if="item.videoSrc" class="video-wrapper bg-white h-100">
-                <video controls class="w-100 h-100 d-block video-player" preload="metadata" style="object-fit: contain;" @play="onVideoPlay">
+            <div class="media-container position-relative overflow-hidden" style="height: 420px; background-color: #000000;">
+              <!-- Video directo -->
+              <div v-if="item.videoSrc" class="video-wrapper h-100 w-100">
+                <video 
+                  controls 
+                  playsinline
+                  class="w-100 h-100 d-block video-player" 
+                  preload="none" 
+                  :poster="item.img || undefined"
+                  style="object-fit: contain; background-color: #000000;" 
+                  @play="onVideoPlay"
+                >
                   <source :src="item.videoSrc" type="video/mp4">
                   Tu navegador no soporta reproducción de videos.
                 </video>
               </div>
 
               <!-- Imagen normal -->
-              <div v-else class="image-wrapper position-relative">
-                <v-img :src="item.img" height="280" cover></v-img>
+              <div v-else class="image-wrapper h-100 w-100 position-relative bg-white">
+                <v-img :src="item.img" class="h-100 w-100" cover></v-img>
               </div>
             </div>
 
@@ -249,6 +257,7 @@ const onVideoPlay = (event: Event) => {
   height: 2.6em;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -258,6 +267,7 @@ const onVideoPlay = (event: Event) => {
   line-height: 1.45;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

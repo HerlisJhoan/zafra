@@ -17,7 +17,7 @@ const internalShow = computed({
 })
 
 const patientName = ref('')
-const selectedPainArea = ref(painAreas[0]!.value)
+const selectedPainArea = ref<string[]>([])
 const selectedDay = ref(days[0]!.value)
 
 const whatsAppLink = computed(() =>
@@ -30,7 +30,7 @@ const whatsAppLink = computed(() =>
 </script>
 
 <template>
-  <v-dialog v-model="internalShow" max-width="500px" transition="dialog-bottom-transition" class="appointment-dialog">
+  <v-dialog v-model="internalShow" max-width="500px" transition="dialog-bottom-transition" class="appointment-dialog" :z-index="2500">
     <v-card class="rounded-xl overflow-hidden appointment-modal-card pa-4 pa-sm-8 bg-slate-soft position-relative">
       <!-- Botón de Cerrar (X) -->
       <v-btn icon="mdi-close" variant="flat" color="white" class="close-btn elevation-2" @click="internalShow = false" aria-label="Cerrar"></v-btn>
@@ -48,15 +48,21 @@ const whatsAppLink = computed(() =>
           color="primary" prepend-inner-icon="mdi-account" class="mb-4 bg-white rounded-lg" hide-details></v-text-field>
 
         <div class="mb-5 mt-4 text-left">
-          <label class="d-block text-subtitle-2 text-slate font-weight-bold mb-2">¿En qué zona sientes molestia?</label>
-          <v-btn-toggle v-model="selectedPainArea" mandatory color="primary" variant="outlined"
-            class="d-flex flex-wrap gap-2 w-100 bg-transparent border-0 toggle-group">
-            <v-btn v-for="area in painAreas" :key="area.value" :value="area.value"
-              class="flex-grow-1 flex-shrink-0 text-caption rounded-lg py-2"
-              style="border: 1px solid rgba(9, 79, 42, 0.25) !important;">
-              {{ area.text }}
-            </v-btn>
-          </v-btn-toggle>
+          <label class="d-block text-subtitle-2 text-slate font-weight-bold mb-2">¿Selecciona el dolor a consultar?</label>
+          <v-select
+            v-model="selectedPainArea"
+            :items="painAreas"
+            item-title="text"
+            item-value="value"
+            multiple
+            chips
+            closable-chips
+            variant="outlined"
+            color="primary"
+            class="bg-white rounded-lg"
+            hide-details
+            placeholder="Selecciona una o varias articulaciones"
+          ></v-select>
         </div>
 
         <div class="mb-6 text-left">
@@ -88,10 +94,6 @@ const whatsAppLink = computed(() =>
 </template>
 
 <style scoped>
-.appointment-dialog {
-  z-index: 2500 !important;
-}
-
 .appointment-modal-card {
   border: 1px solid var(--border-light);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15) !important;
