@@ -19,16 +19,11 @@ export interface Option {
 }
 
 export const painAreas: Option[] = [
-  { text: 'Cabeza', value: 'Cabeza' },
-  { text: 'Columna vertebral', value: 'Columna vertebral' },
-  { text: 'Tórax', value: 'Tórax' },
-  { text: 'Cintura escapular', value: 'Cintura escapular' },
   { text: 'Hombro', value: 'Hombro' },
   { text: 'Codo', value: 'Codo' },
   { text: 'Antebrazo', value: 'Antebrazo' },
   { text: 'Muñeca', value: 'Muñeca' },
   { text: 'Mano', value: 'Mano' },
-  { text: 'Pelvis', value: 'Pelvis' },
   { text: 'Cadera', value: 'Cadera' },
   { text: 'Rodilla', value: 'Rodilla' },
   { text: 'Tobillo', value: 'Tobillo' },
