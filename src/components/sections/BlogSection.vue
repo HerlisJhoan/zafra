@@ -78,10 +78,12 @@ const playVideo = (idx: number) => {
         <v-col v-for="(item, idx) in items" :key="idx" cols="12" sm="6" md="3">
           <v-card class="blog-card elevation-2 rounded-xl overflow-hidden h-100 d-flex flex-column border-light">
             <!-- Contenedor del video o la imagen -->
-            <div class="position-relative overflow-hidden aspect-ratio-box" style="height: 280px; background-color: #ffffff;">
+            <div class="position-relative overflow-hidden aspect-ratio-box"
+              style="height: 280px; background-color: #ffffff;">
               <!-- Video directo con fondo blanco -->
               <div v-if="item.videoSrc" class="video-player-wrapper bg-white h-100">
-                <video controls class="w-100 h-100 d-block" preload="metadata" style="object-fit: contain; background-color: #ffffff; height: 280px;">
+                <video controls class="w-100 h-100 d-block" preload="metadata"
+                  style="object-fit: contain; background-color: #ffffff; height: 280px;">
                   <source :src="item.videoSrc" type="video/mp4">
                   Tu navegador no soporta videos.
                 </video>
@@ -103,7 +105,7 @@ const playVideo = (idx: number) => {
               <h3 class="article-title font-weight-bold text-slate mb-3">
                 {{ item.title }}
               </h3>
-              
+
               <!-- Autor -->
               <div class="author-row d-flex align-center mb-3 text-slate-muted text-caption">
                 <v-icon size="14" class="mr-1">mdi-account-outline</v-icon>
@@ -117,12 +119,8 @@ const playVideo = (idx: number) => {
 
               <!-- Botón interactivo al pie -->
               <div class="mt-auto">
-                <v-btn 
-                  variant="text" 
-                  color="primary" 
-                  class="px-0 font-weight-black text-uppercase action-more-btn" 
-                  href="#citas"
-                >
+                <v-btn variant="text" color="primary" class="px-0 font-weight-black text-uppercase action-more-btn"
+                  href="#citas">
                   Más información
                 </v-btn>
               </div>

@@ -70,7 +70,7 @@ const onVideoPlay = (event: Event) => {
       </div>
 
       <!-- Carrusel (Slide Group) de Videos -->
-      <v-slide-group show-arrows class="pa-4 reveal custom-slide-group">
+      <v-slide-group show-arrows class="pa-4 custom-slide-group">
         <v-slide-group-item v-for="(item, idx) in mediaItems" :key="idx">
           <div class="px-3 py-4" style="width: 360px; max-width: 92vw; height: 100%;">
             <v-card class="media-card-item rounded-2xl overflow-hidden elevation-4 border-light h-100 d-flex flex-column bg-white mx-auto">
@@ -78,13 +78,12 @@ const onVideoPlay = (event: Event) => {
             <div class="media-container position-relative overflow-hidden" style="height: 420px; background-color: #000000;">
               <!-- Video directo -->
               <div v-if="item.videoSrc" class="video-wrapper h-100 w-100">
-                <video 
-                  controls 
+                <video
+                  controls
                   playsinline
-                  class="w-100 h-100 d-block video-player" 
-                  preload="none" 
-                  :poster="item.img || undefined"
-                  style="object-fit: contain; background-color: #000000;" 
+                  class="w-100 h-100 d-block video-player"
+                  preload="metadata"
+                  style="object-fit: contain; background-color: #000000;"
                   @play="onVideoPlay"
                 >
                   <source :src="item.videoSrc" type="video/mp4">
