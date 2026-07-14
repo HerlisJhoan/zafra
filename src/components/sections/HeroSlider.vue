@@ -18,7 +18,7 @@ const emit = defineEmits<{
           <!-- Badge Especialidad -->
           <div class="d-inline-flex align-center px-4 py-1.5 rounded-pill bg-primary-light text-primary text-caption font-weight-bold mb-6 border border-primary-light">
             <v-icon size="16" class="mr-2" color="primary">mdi-shield-check</v-icon>
-            Centro especializado en Terapia Regenerativa
+            Centro Médico en Terapia Regenerativa
           </div>
 
           <!-- Título Principal -->

@@ -29,7 +29,7 @@
           <!-- Listado de Beneficios -->
           <ul class="about-bullets mb-6">
             <li>
-              <strong>Experiencia:</strong> Somos una organización referente en los diversos tratamientos regenerativos, con más de 10 años de trayectoria y cientos de pacientes tratados con éxito en Tarapoto. Contamos con un equipo médico especializado y capacitado en las últimas técnicas de medicina regenerativa.
+              <strong>Experiencia:</strong> Somos una organización referente en los diversos tratamientos regenerativos, con más de 10 años de trayectoria y cientos de pacientes tratados con éxito en Tarapoto.
             </li>
             <li>
               <strong>Calidad:</strong> Ofrecemos tratamientos de última generación, con tecnología moderna y protocolos rigurosos. Nuestras terapias regenerativas son personalizadas, seguras y eficaces, adaptadas a las necesidades específicas de cada paciente.

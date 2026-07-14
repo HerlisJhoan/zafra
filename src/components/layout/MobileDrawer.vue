@@ -19,36 +19,35 @@ const handleItemClick = (href: string) => {
 </script>
 
 <template>
-  <v-navigation-drawer
-    v-model="mobileDrawer"
-    temporary
-    location="right"
-    width="310"
-    style="border-top-left-radius: 24px; border-bottom-left-radius: 24px; box-shadow: -8px 0 28px rgba(11,26,54,0.15); border: none;"
-  >
+  <v-navigation-drawer v-model="mobileDrawer" temporary location="right" width="310"
+    style="border-top-left-radius: 24px; border-bottom-left-radius: 24px; box-shadow: -8px 0 28px rgba(11,26,54,0.15); border: none;">
     <div class="pa-6 d-flex flex-column" style="min-height: 100%;">
       <div class="d-flex align-center justify-space-between mb-8">
         <div class="d-flex align-center">
-          <img src="/logo.png" alt="Logo Dr. Zafra" class="mr-3 flex-shrink-0" style="height: 40px; width: 40px; object-fit: contain; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" />
+          <div
+            style="border: 2px solid rgba(10, 124, 196, 0.2); border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; overflow: hidden;"
+            class="mr-3 flex-shrink-0">
+            <img :src="'/logo.png'" alt="Logo Dr. Zafra"
+              style="height: 100%; width: 100%; object-fit: cover; border-radius: 50%; transform: scale(1.35); image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" />
+          </div>
           <div class="d-flex flex-column text-left justify-center" style="line-height: 1.15;">
-            <span class="text-uppercase font-weight-bold text-grey-darken-1" style="font-size: 0.6rem; letter-spacing: 1px;">Centro Médico</span>
-            <span class="text-uppercase font-weight-black text-primary" style="font-size: 1.05rem; letter-spacing: 0.5px;">Dr. Zafra</span>
+            <span class="text-uppercase font-weight-bold text-grey-darken-1"
+              style="font-size: 0.6rem; letter-spacing: 1px;">Centro Médico</span>
+            <span class="text-uppercase font-weight-black text-primary"
+              style="font-size: 1.05rem; letter-spacing: 0.5px;">Dr. Zafra</span>
           </div>
         </div>
-        <v-btn icon="mdi-close" variant="text" size="small" @click="mobileDrawer = false" aria-label="Cerrar menú"></v-btn>
+        <v-btn icon="mdi-close" variant="text" size="small" @click="mobileDrawer = false"
+          aria-label="Cerrar menú"></v-btn>
       </div>
 
       <v-list nav class="flex-grow-1 pa-0">
-        <v-list-item
-          v-for="item in navItems"
-          :key="item.href"
-          :href="item.href"
+        <v-list-item v-for="item in navItems" :key="item.href" :href="item.href"
           :class="['mb-2 rounded-xl py-3 px-4', activeNav === item.href ? 'bg-primary-light text-primary font-weight-black' : 'text-slate-dark font-weight-bold']"
-          @click="handleItemClick(item.href)"
-          style="transition: all 0.2s ease;"
-        >
+          @click="handleItemClick(item.href)" style="transition: all 0.2s ease;">
           <template v-slot:prepend>
-            <v-icon :color="activeNav === item.href ? 'primary' : 'grey-darken-1'" class="mr-3" size="20">{{ item.icon }}</v-icon>
+            <v-icon :color="activeNav === item.href ? 'primary' : 'grey-darken-1'" class="mr-3" size="20">{{ item.icon
+            }}</v-icon>
           </template>
           <v-list-item-title style="font-size: 0.95rem; font-weight: inherit;">{{ item.text }}</v-list-item-title>
         </v-list-item>
@@ -56,12 +55,14 @@ const handleItemClick = (href: string) => {
 
       <div class="mt-auto pt-6 border-top border-light">
         <v-btn prepend-icon="mdi-phone-outline" variant="outlined" color="primary" block
-          class="action-btn font-weight-bold mb-3 rounded-lg py-6 d-flex align-center justify-center" :href="`tel:${PHONE_E164}`">
+          class="action-btn font-weight-bold mb-3 rounded-lg py-6 d-flex align-center justify-center"
+          :href="`tel:${PHONE_E164}`">
           Llamar Ahora
         </v-btn>
         <v-btn prepend-icon="mdi-whatsapp" color="success" variant="flat" block
           class="action-btn font-weight-bold text-white rounded-lg py-6 d-flex align-center justify-center"
-          :href="`https://wa.me/${PHONE_E164.replace('+', '')}`" target="_blank" rel="noopener" @click="mobileDrawer = false">
+          :href="`https://wa.me/${PHONE_E164.replace('+', '')}`" target="_blank" rel="noopener"
+          @click="mobileDrawer = false">
           Reservar Cita
         </v-btn>
       </div>
